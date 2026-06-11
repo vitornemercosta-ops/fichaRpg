@@ -1,0 +1,323 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow-x: hidden;
+}
+
+/* Ficha do Personagem */
+#ficha {
+    width: 100%;
+    height: auto;
+    min-height: 30vh;
+    background: white;
+    margin-bottom: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#personagem {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#icone {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#icone img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Preview da imagem antes de salvar */
+.image-preview {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: none;
+}
+
+#info {
+    flex: 1;
+    padding: 20px;
+    background: white;
+}
+
+#info h1 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #667eea;
+    display: inline-block;
+}
+
+.atributosCadaInfo {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.atributosCadaInfo:hover {
+    transform: translateX(5px);
+    background: #e9ecef;
+}
+
+.atributosCadaInfo h3 {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.atributosCadaInfo p {
+    color: #555;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Botões da ficha */
+#info button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 10px 0 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#info button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+#info button:active {
+    transform: translateY(0);
+}
+
+/* Botão de upload personalizado */
+.upload-container {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+.upload-label {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-label:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+#resetAvatar {
+    background: #dc3545;
+}
+
+#resetAvatar:hover {
+    background: #c82333;
+}
+
+/* Container de habilidades */
+#todasHabilidades {
+    width: 100%;
+    height: auto;
+    min-height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.habilidades {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.habilidades:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.habilidades h1 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #667eea;
+}
+
+.habilidades h3 {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: 600;
+    color: #555;
+    margin-top: 5px;
+}
+
+select, input {
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Lista de habilidades adicionadas */
+#listaHabilidades {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.item-habilidade {
+    background: white;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #personagem {
+        flex-direction: column;
+    }
+    
+    #icone {
+        width: 100%;
+        height: auto;
+    }
+    
+    .habilidades {
+        min-width: 100%;
+    }
+    
+    #info button {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .upload-container {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .upload-label, #resetAvatar {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .atributosCadaInfo {
+        padding: 8px;
+    }
+    
+    .habilidades {
+        padding: 15px;
+    }
+}
+
+/* Loading spinner */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

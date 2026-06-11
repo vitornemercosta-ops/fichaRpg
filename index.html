@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Ninja - Koichi</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+
+    <main>
+        <div id="ficha"></div>
+        <div id="todasHabilidades">
+            <div class="habilidades armas">
+                <h1>⚔️ Armas</h1>
+                <h3>Escolha sua arma e poder</h3>
+                <form id="formArmas">
+                    <label for="selecaoArmas">Escolha uma arma:</label>
+                    <select id="selecaoArmas">
+                        <option value="Foice de Mana">Foice de Mana</option>
+                        <option value="Machado de Mana Otsutsuki">Machado de Mana Otsutsuki</option>
+                        <option value="Espada Kurama Gen 3">Espada Kurama Gen 3</option>
+                        <option value="Foice Alphi Gen 3">Foice Alphi Gen 3</option>
+                    </select>
+                    
+                    <label for="poderes">Escolha um poder:</label>
+                    <select id="poderes">
+                        <option value="Doku Tengoku">Doku Tengoku</option>
+                        <option value="Sharingan">Sharingan</option>
+                        <option value="Maru Gen 1 2 3">Maru Gen 1 2 3</option>
+                        <option value="Shukako Gen 1 2 3">Shukako Gen 1 2 3</option>
+                    </select>
+                    
+                    <button type="submit">➕ Adicionar</button>
+                </form>
+            </div>
+
+            <div class="habilidades categoria">
+                <h1>🏷️ Categoria</h1>
+                <h3>Defina o rank do ninja</h3>
+                <form id="formCategoria">
+                    <label for="categorias">Escolha uma categoria ninja:</label>
+                    <select id="categorias">
+                        <option value="Estudantes da Academia">Estudantes da Academia</option>
+                        <option value="Genin">Genin</option>
+                        <option value="Chunin">Chunin</option>
+                        <option value="Jonin">Jonin</option>
+                        <option value="Jonin Especial">Jonin Especial</option>
+                        <option value="ANBU">ANBU</option>
+                        <option value="Kage">Kage</option>
+                        <option value="Nukenin">Nukenin</option>
+                        <option value="Sannin">Sannin</option>
+                    </select>
+                    <button type="submit">➕ Adicionar</button>
+                </form>
+            </div>
+
+            <div class="habilidades">
+                <h1>✨ Habilidade 1</h1>
+                <form id="formHabilidade1">
+                    <input type="text" id="hab1Input" placeholder="Informações de conjuração de magia">
+                    <button type="submit">➕ Adicionar</button>
+                </form>
+            </div>
+
+            <div class="habilidades">
+                <h1>🔮 Habilidade 2</h1>
+                <form id="formHabilidade2">
+                    <input type="text" id="hab2Input" placeholder="Informações de conjuração de magia">
+                    <button type="submit">➕ Adicionar</button>
+                </form>
+            </div>
+
+            <div class="habilidades">
+                <h1>⚡ Habilidade 3</h1>
+                <form id="formHabilidade3">
+                    <input type="text" id="hab3Input" placeholder="Informações passiva de habilidade">
+                    <button type="submit">➕ Adicionar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
